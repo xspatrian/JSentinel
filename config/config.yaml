@@ -1,0 +1,27 @@
+# JSentinel Configuration
+
+gemini:
+  api_key: "AIzaSyChJOx-3-okiZ1_60CAi4Ql1e1_32gBA5M"  # Get from https://aistudio.google.com/
+  model: "gemini-2.5-flash"            # or "gemini-2.5-pro" for deeper analysis
+  max_tokens: 8192
+  temperature: 0.2                     # Lower = more focused, less creative
+
+fetching:
+  timeout: 30
+  max_retries: 3
+  delay_between_requests: 0.5
+  verify_ssl: false
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+
+analysis:
+  max_file_size_mb: 10
+  beautify_minified: true
+  scan_source_maps: true
+  historical_wayback: false
+  max_wayback_depth: 5
+
+reporting:
+  output_dir: "output"
+  template: "templates/report.html"
+  include_evidence: true
+  max_evidence_length: 2000
